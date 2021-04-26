@@ -92,7 +92,8 @@ yarn-install:
 build-ui: yarn-install lint-ui ## Build packages
 	export PATH=$$(pwd)/node_modules/.bin:$$PATH && lerna run build
 
-build-server: lint-server ## Build backend
+#build-server: lint-server ## Build backend
+build-server:
 	python setup.py bdist_wheel sdist
 
 build: build-server build-ui
