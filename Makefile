@@ -114,7 +114,7 @@ install-ui: build-ui
 	$(call INSTALL_LAB_EXTENSION,python-editor)
 	$(call INSTALL_LAB_EXTENSION,r-editor)
 
-install: install-server install-ui ## Build and install
+install: install-ui ## Build and install
 	jupyter lab build
 	jupyter serverextension list
 	jupyter server extension list
