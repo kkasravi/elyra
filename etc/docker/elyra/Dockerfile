@@ -39,8 +39,8 @@ RUN conda remove --force -y terminado && \
     mkdir -p /home/jovyan/.npm-global && \
     npm install -g yarn && \
     npm install -g npm && \
-    cd /tmp && git clone https://github.com/elyra-ai/elyra.git && \
-    cd /tmp/elyra && git checkout tags/v2.2.2 -b v2.2.2 && make UPGRADE_STRATEGY=eager install && rm -rf /tmp/elyra
+    cd /tmp && git clone https://github.com/kkasravi/elyra.git && \
+    cd /tmp/elyra && git checkout kkasravi/v2.2.2 -b v2.2.2 && make UPGRADE_STRATEGY=eager install && rm -rf /tmp/elyra
 
 CMD ["/usr/local/bin/start-elyra.sh"]
 
