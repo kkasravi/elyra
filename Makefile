@@ -84,7 +84,8 @@ lint-ui:
 	yarn run prettier
 	yarn run eslint
 
-lint: lint-ui lint-server ## Run linters
+#lint: lint-ui lint-server ## Run linters
+lint: lint-ui 
 
 yarn-install:
 	yarn
