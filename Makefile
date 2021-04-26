@@ -84,8 +84,7 @@ lint-ui:
 	yarn run prettier
 	yarn run eslint
 
-#lint: lint-ui lint-server ## Run linters
-lint: lint-ui 
+lint: lint-ui lint-server ## Run linters
 
 yarn-install:
 	yarn
@@ -114,7 +113,7 @@ install-ui: build-ui
 	$(call INSTALL_LAB_EXTENSION,python-editor)
 	$(call INSTALL_LAB_EXTENSION,r-editor)
 
-install: install-ui ## Build and install
+install: install-server install-ui ## Build and install
 	jupyter lab build
 	jupyter serverextension list
 	jupyter server extension list
