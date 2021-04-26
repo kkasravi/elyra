@@ -41,7 +41,7 @@ RUN conda remove --force -y terminado && \
     npm install -g npm && \
     cd /tmp && git clone https://github.com/kkasravi/elyra.git && \
     cd /tmp/elyra && git fetch origin kkasravi/v2.2.2 && \
-    git checkout kkasravi/v2.2.2 -b v2.2.2 && make UPGRADE_STRATEGY=eager install && rm -rf /tmp/elyra
+    git checkout -b v2.2.2 origin/kkasravi/v2.2.2 && make UPGRADE_STRATEGY=eager install && rm -rf /tmp/elyra
 
 CMD ["/usr/local/bin/start-elyra.sh"]
 
